@@ -7,7 +7,15 @@ public class BasicAccount extends StandardAccount {
     public BasicAccount(int accountNumber, double Withdrawallimit) {
         super(accountNumber, Withdrawallimit);
         this.creditLimit = 0;
-        this.withdrawallimit = Withdrawallimit;
+        if(Withdrawallimit > 0){
+            this.withdrawallimit = Withdrawallimit;
+        }
+        else
+        {
+        this.withdrawallimit = 0;
+        }
+
+
     }
 
     @Override
